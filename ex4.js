@@ -10,5 +10,16 @@ const addNumber = (...args) => {
     return sum;
 }
 
+
 console.log(addNumber(1, 2, 3));
 console.log(addNumber(1, 2, 3, 4, 5));
+
+
+// metoda 2
+
+const addNumberTwo = (...args) => {
+    return args.reduce((sum, elem) => sum + elem, 0);
+}
+
+console.log(addNumberTwo(1, 2, 3));
+console.log(addNumberTwo(1, 2, 3, 4, 5));
