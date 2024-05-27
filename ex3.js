@@ -7,7 +7,7 @@
 const letterCount = (string, letter) => {
     let count  = 0;
     for (let char of string) {
-        if (char === letter) {
+        if (char.toLowerCase() === letter) {
             count++;
         }
     }
@@ -16,3 +16,14 @@ const letterCount = (string, letter) => {
 
 console.log(letterCount("Îmi place programarea", "a"));
 console.log(letterCount("Vreau să lucrez în IT", "r"));
+
+
+// met 2
+
+const letterCountTwo = (string, letter) => {
+    const newStringArray = string.split('').filter(char => char.toLowerCase() === letter);
+    return newStringArray.length;
+}
+
+console.log(letterCountTwo("Îmi place programarea", "a"));
+console.log(letterCountTwo("Vreau să lucrez în IT", "t"));
